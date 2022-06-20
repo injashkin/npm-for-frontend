@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pug": "pug --pretty -w src/index.pug -o dist",
+    "serve": "browser-sync dist -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/injashkin/npm-for-frontend#readme",
   "devDependencies": {
+    "browser-sync": "^2.27.10",
     "pug-cli": "^1.0.0-alpha6"
   }
 }
