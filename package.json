@@ -1,0 +1,24 @@
+{
+  "name": "npm-for-frontend",
+  "version": "1.0.0",
+  "description": "Набор NPM модулей для создания статического сайта на Pug, Sass, JavaScript, Markdown",
+  "main": "index.js",
+  "scripts": {
+    "pug": "pug --pretty -w src/index.pug -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/injashkin/npm-for-frontend.git"
+  },
+  "keywords": [],
+  "author": "injashkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/injashkin/npm-for-frontend/issues"
+  },
+  "homepage": "https://github.com/injashkin/npm-for-frontend#readme",
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
