@@ -4,8 +4,9 @@
   "description": "Набор NPM модулей для создания статического сайта на Pug, Sass, JavaScript, Markdown",
   "main": "index.js",
   "scripts": {
-    "pug": "pug --pretty -w src/index.pug -o dist",
-    "serve": "browser-sync dist -w",
+    "watch:pug": "pug --pretty -w src/index.pug -o dist",
+    "watch:serve": "browser-sync dist -w",
+    "watch": "npm-run-all -p watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/injashkin/npm-for-frontend#readme",
   "devDependencies": {
     "browser-sync": "^2.27.10",
+    "npm-run-all": "^4.1.5",
     "pug-cli": "^1.0.0-alpha6"
   }
 }
