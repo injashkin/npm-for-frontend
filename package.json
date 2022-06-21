@@ -4,11 +4,14 @@
   "description": "Набор NPM модулей для создания статического сайта на Pug, Sass, JavaScript, Markdown",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf dist tmp",
     "pug": "pug --pretty src/index.pug -o dist",
     "watch:pug": "pug --pretty src/index.pug -o dist",
+    "sass": "node-sass src -o tmp",
+    "watch:sass": "node-sass -w src -o tmp",
+    "watch:post": "postcss -w tmp -d dist -u postcss-preset-env",
     "watch:serve": "browser-sync dist -w",
-    "watch": "npm-run-all clean pug -p watch:*",
+    "watch": "npm-run-all clean pug sass -p watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +27,11 @@
   "homepage": "https://github.com/injashkin/npm-for-frontend#readme",
   "devDependencies": {
     "browser-sync": "^2.27.10",
+    "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0",
+    "postcss-preset-env": "^7.7.1",
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^3.0.2"
   }
