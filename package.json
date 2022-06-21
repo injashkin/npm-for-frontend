@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "watch:pug": "pug --pretty -w src/index.pug -o dist",
+    "pug": "pug --pretty src/index.pug -o dist",
+    "watch:pug": "pug --pretty src/index.pug -o dist",
     "watch:serve": "browser-sync dist -w",
-    "watch": "npm-run-all clean -p watch:*",
+    "watch": "npm-run-all clean pug -p watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
