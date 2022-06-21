@@ -11,7 +11,8 @@
     "watch:sass": "node-sass -w src -o tmp",
     "watch:post": "postcss -w tmp -d dist -u postcss-preset-env",
     "watch:serve": "browser-sync dist -w",
-    "watch": "npm-run-all clean pug sass -p watch:*",
+    "dev": "npm-run-all clean pug sass -p watch:*",
+    "build": "echo \"There's nothing yet, but you can contribute\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
