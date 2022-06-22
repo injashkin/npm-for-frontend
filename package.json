@@ -4,12 +4,14 @@
   "description": "Набор NPM модулей для создания статического сайта на Pug, Sass, JavaScript, Markdown",
   "main": "index.js",
   "scripts": {
+    "help": "browserify --help",
     "clean": "rimraf dist tmp",
     "pug": "pug --pretty src/index.pug -o dist",
     "watch:pug": "pug --pretty src/index.pug -o dist",
     "sass": "node-sass src/index.scss -o tmp",
     "watch:sass": "node-sass -w src/index.scss -o tmp",
-    "watch:post": "postcss -w tmp -d dist -u postcss-preset-env",
+    "watch:post": "postcss -w tmp/index.css -d dist -u postcss-preset-env",
+    "watch:watchify": "watchify src/index.js -o dist/index.js -v",
     "watch:serve": "browser-sync dist -w",
     "dev": "npm-run-all clean pug sass -p watch:*",
     "build": "echo \"There's nothing yet, but you can contribute\" && exit 1",
@@ -27,13 +29,31 @@
   },
   "homepage": "https://github.com/injashkin/npm-for-frontend#readme",
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babelify": "^10.0.0",
     "browser-sync": "^2.27.10",
+    "browserify": "^17.0.0",
     "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
     "postcss-preset-env": "^7.7.1",
     "pug-cli": "^1.0.0-alpha6",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "watchify": "^4.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
   }
 }
