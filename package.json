@@ -7,7 +7,7 @@
     "help": "rollup --help",
     "clean": "rimraf dist tmp",
     "pug": "pug --pretty src/index.pug -o dist",
-    "watch:pug": "pug --pretty src/index.pug -o dist",
+    "watch:pug": "pug -w --pretty src/index.pug -o dist",
     "sass": "node-sass src/index.scss -o tmp",
     "watch:sass": "node-sass -w src/index.scss -o tmp",
     "watch:post": "postcss -w tmp -d dist -u postcss-preset-env",
