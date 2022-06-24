@@ -4,15 +4,16 @@
   "description": "Набор NPM модулей для создания статического сайта на Pug, Sass, JavaScript, Markdown",
   "main": "index.js",
   "scripts": {
-    "help": "browserify --help",
+    "help": "rollup --help",
     "clean": "rimraf dist tmp",
     "pug": "pug --pretty src/index.pug -o dist",
-    "watch:pug": "pug --pretty src/index.pug -o dist",
+    "watch:pug": "pug -w --pretty src/index.pug -o dist",
     "sass": "node-sass src/index.scss -o tmp",
     "watch:sass": "node-sass -w src/index.scss -o tmp",
     "watch:post": "postcss -w tmp/index.css -d dist -u postcss-preset-env",
     "watch:watchify": "watchify src/index.js -o dist/index.js -v",
     "watch:serve": "browser-sync dist -w",
+    "watch:rollup": "rollup --watch  -c rollup.config.js",
     "dev": "npm-run-all clean pug sass -p watch:*",
     "build": "echo \"There's nothing yet, but you can contribute\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -42,18 +43,6 @@
     "postcss-preset-env": "^7.7.1",
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^3.0.2",
-    "watchify": "^4.0.0"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "@babel/preset-env"
-          ]
-        }
-      ]
-    ]
+    "rollup": "^2.75.7"
   }
 }

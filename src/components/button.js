@@ -1,6 +1,10 @@
-export function button(prop) {
+export const button = () => {
   let button = document.querySelector('.button');
-  button.innerHTML = `Этот текст изменил JavaScript ${prop}`;
-  document.body.appendChild(button);
-  console.log('Ура! Заработало!');
-}
+  let text = button.textContent;
+  const message = "Этот текст изменен JavaScript'ом";
+
+  button.addEventListener('click', () => {
+    text === message ? (text = 'Жми еще!') : (text = message);
+    button.textContent = text;
+  });
+};
