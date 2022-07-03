@@ -10,14 +10,23 @@ html
     title= 'Быстрый запуск Pug'
   body
     h1.name= 'Код написан в шаблонизаторе Pug!'
-    +button()
     p.text= 'Нажми кнопку'
-    p.text= 'Если что-то не так звони по телефону:'
-    a.phone-link(href='tel:+79189999999' title='Позвонить')      
+    +button()
+    
+
+    p.text= 'Если что-то не так, звони на мобилу:'
+    a.link(href='tel:+79189999999' title='Позвонить')      
       img.icon-phone(src='svg/phone_black_24dp.svg' role='img')
       .phone-number='+79189999999'
+
     p.text= 'или скинь на мыло:'
-    a.email-link(href='mailto:info@jinv.ru' title='Написать письмо')
+    a.link(href='mailto:info@jinv.ru' title='Написать письмо')
       svg.icon(role='img')
         use(href='svg/sprite.svg#email_black_24dp')
-      .email-address='info@jinv.ru'
+      .address='info@jinv.ru'
+
+    p.text= 'либо на телегу:'
+    a.link(href='https://t.me/jashkin' title='Написать в Телеграм')
+      svg.icon(role='img')
+        use.custom-svg(href='svg/sprite.svg#telegram')
+      .address='@jashkin'

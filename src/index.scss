@@ -12,7 +12,7 @@ html {
   user-select: none;
 }
 
-.phone-link {
+.link {
   display: flex;
   text-decoration: none;
   color: $font-color;
@@ -32,26 +32,17 @@ html {
   font-size: 2.4 * $font-size;
 }
 
-.email-link {
-  display: flex;
-  text-decoration: none;
-  color: $font-color;
-
-  &:hover {
-    text-decoration: underline;
-    background-color: bisque;
-  }
-}
-
 .icon {
-  width: 2.5 * $font-size;
-  height: 2.5 * $font-size;
+  width: 4 * $font-size;
+  height: 4 * $font-size;
 }
 
-.icon > use {
-  transform: scale(1.6);
+.custom-svg {
+  stroke: rgb(255, 0, 0);
+  stroke-width: 2px;
+  fill: rgb(255, 251, 0);
 }
 
-.email-address {
-  font-size: 2 * $font-size;
+.address {
+  font-size: 3 * $font-size;
 }
