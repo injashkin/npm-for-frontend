@@ -13,6 +13,11 @@ html
     +button()
     p.text= 'Нажми кнопку'
     p.text= 'Если что-то не так звони по телефону:'
-    a.phone-link(href='tel:+79189999999')      
-      img.icon-phone(src='svg/phone_black_24dp.svg')
+    a.phone-link(href='tel:+79189999999' title='Позвонить')      
+      img.icon-phone(src='svg/phone_black_24dp.svg' role='img')
       .phone-number='+79189999999'
+    p.text= 'или скинь на мыло:'
+    a.email-link(href='mailto:info@jinv.ru' title='Написать письмо')
+      svg.icon(role='img')
+        use(href='svg/sprite.svg#email_black_24dp')
+      .email-address='info@jinv.ru'

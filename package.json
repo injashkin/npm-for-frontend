@@ -11,7 +11,7 @@
     "sass": "node-sass src/index.scss -o tmp",
     "watch:sass": "node-sass -w src/index.scss -o tmp",
     "watch:post": "postcss -w tmp/index.css -d dist -u postcss-preset-env",
-    "watch:svg": "svgo -f src/assets/svg -o dist/svg",
+    "watch:svg": "svgo -f src/assets/svg -o dist/svg && svg-sprite-generate -d dist/svg -o dist/svg/sprite.svg",
     "img": "imagemin src/pages/**/images/* src/images/* -o dist/images",
     "watch:serve": "browser-sync dist -w",
     "watch:rollup": "rollup --watch -c rollup.config.js",
@@ -41,6 +41,7 @@
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^3.0.2",
     "rollup": "^2.75.7",
+    "svg-sprite-generator": "^0.0.7",
     "svgo": "^2.8.0"
   }
 }

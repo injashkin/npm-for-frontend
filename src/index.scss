@@ -16,6 +16,11 @@ html {
   display: flex;
   text-decoration: none;
   color: $font-color;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: bisque;
+  }
 }
 
 .icon-phone {
@@ -25,4 +30,28 @@ html {
 
 .phone-number {
   font-size: 2.4 * $font-size;
+}
+
+.email-link {
+  display: flex;
+  text-decoration: none;
+  color: $font-color;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: bisque;
+  }
+}
+
+.icon {
+  width: 2.5 * $font-size;
+  height: 2.5 * $font-size;
+}
+
+.icon > use {
+  transform: scale(1.6);
+}
+
+.email-address {
+  font-size: 2 * $font-size;
 }
