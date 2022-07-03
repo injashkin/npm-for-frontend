@@ -11,3 +11,18 @@ html {
 .name {
   user-select: none;
 }
+
+.phone-link {
+  display: flex;
+  text-decoration: none;
+  color: $font-color;
+}
+
+.icon-phone {
+  width: 2.5 * $font-size;
+  height: 2.5 * $font-size;
+}
+
+.phone-number {
+  font-size: 2.4 * $font-size;
+}

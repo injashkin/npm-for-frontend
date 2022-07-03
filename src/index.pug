@@ -12,3 +12,7 @@ html
     h1.name= 'Код написан в шаблонизаторе Pug!'
     +button()
     p.text= 'Нажми кнопку'
+    p.text= 'Если что-то не так звони по телефону:'
+    a.phone-link(href='tel:+79189999999')      
+      img.icon-phone(src='svg/phone_black_24dp.svg')
+      .phone-number='+79189999999'

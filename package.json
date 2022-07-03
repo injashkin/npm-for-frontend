@@ -11,6 +11,7 @@
     "sass": "node-sass src/index.scss -o tmp",
     "watch:sass": "node-sass -w src/index.scss -o tmp",
     "watch:post": "postcss -w tmp/index.css -d dist -u postcss-preset-env",
+    "watch:svg": "svgo -f src/assets/svg -o dist/svg",
     "img": "imagemin src/pages/**/images/* src/images/* -o dist/images",
     "watch:serve": "browser-sync dist -w",
     "watch:rollup": "rollup --watch -c rollup.config.js",
@@ -39,6 +40,7 @@
     "postcss-preset-env": "^7.7.1",
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^3.0.2",
-    "rollup": "^2.75.7"
+    "rollup": "^2.75.7",
+    "svgo": "^2.8.0"
   }
 }
