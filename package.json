@@ -4,19 +4,16 @@
   "description": "Набор NPM модулей для создания статического сайта на Pug, Sass, JavaScript, Markdown",
   "main": "index.js",
   "scripts": {
-    "help": "rollup --help",
     "clean": "rimraf dist tmp",
-    "pug": "pug --pretty src/index.pug -o dist",
-    "watch:pug": "pug -w --pretty src/index.pug -o dist",
+    "md-pug-to-html": "md-pug-to-html -i=content -o=dist -t=src/pages/article",
+    "pug": "pug --pretty src/pages/home/index.pug -o dist",
+    "watch:pug": "pug --pretty -w src/pages/home/index.pug -o dist",
     "sass": "node-sass src/index.scss -o tmp",
     "watch:sass": "node-sass -w src/index.scss -o tmp",
-    "watch:post": "postcss -w tmp/index.css -d dist -u postcss-preset-env",
-    "watch:svg": "svgo -f src/assets/svg -o dist/svg && svg-sprite-generate -d dist/svg -o dist/svg/sprite.svg",
-    "img": "imagemin src/pages/**/images/* src/images/* -o dist/images",
+    "watch:post": "postcss -w tmp -d dist -u postcss-preset-env",
     "watch:serve": "browser-sync dist -w",
-    "watch:rollup": "rollup --watch -c rollup.config.js",
-    "dev": "npm-run-all clean pug sass img -p watch:*",
-    "build": "echo \"There's nothing yet, but you can contribute\" && exit 1",
+    "watch:rollup": "rollup -w -c rollup.config.js",
+    "dev": "npm-run-all clean md-pug-to-html pug sass -p watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,16 +29,14 @@
   "homepage": "https://github.com/injashkin/npm-for-frontend#readme",
   "devDependencies": {
     "browser-sync": "^2.27.10",
-    "imagemin-cli": "^7.0.0",
+    "md-pug-to-html": "^1.2.4",
     "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.14",
-    "postcss-cli": "^9.1.0",
-    "postcss-preset-env": "^7.7.1",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "postcss-preset-env": "^7.8.0",
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^3.0.2",
-    "rollup": "^2.75.7",
-    "svg-sprite-generator": "^0.0.7",
-    "svgo": "^2.8.0"
+    "rollup": "^2.78.1"
   }
 }

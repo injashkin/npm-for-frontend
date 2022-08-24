@@ -1,0 +1,20 @@
+-
+  let data = {
+    default_description: "Показан пример общего шаблона Pug для всех страниц",
+    default_title: "Общий шаблон Pug"
+  }
+
+- const {default_title, default_description} = data
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='index.css')
+    script(defer src='index.js')
+    meta(name= 'description' content= description ? description : default_description)
+    title= title ? title : default_title
+
+  body
+    block main

@@ -1,0 +1,8 @@
+mixin list-articles
+
+  include ../../data/link-list.pug
+  ul.list__box
+    each point in points
+      li
+        a.list__item(href=point.pathFile)= point.title
+        p= point.description

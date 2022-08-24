@@ -1,3 +1,3 @@
-import { button } from './components/button.js';
+import { button } from "./components/button/button.js"
 
-button();
+button()
