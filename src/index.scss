@@ -9,3 +9,38 @@ html {
 .example {
   user-select: none;
 }
+
+.phone-link {
+  display: flex;
+  text-decoration: none;
+  color: $font-color;
+}
+
+.icon-phone {
+  width: 2.5 * $font-size;
+  height: 2.5 * $font-size;
+}
+
+.phone-number {
+  font-size: 2.4 * $font-size;
+}
+
+.email-link {
+  display: flex;
+  text-decoration: none;
+  color: $font-color;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: bisque;
+  }
+}
+
+.icon {
+  width: 2.5 * $font-size;
+  height: 2.5 * $font-size;
+}
+
+.email-address {
+  font-size: 2 * $font-size;
+}

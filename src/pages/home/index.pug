@@ -5,4 +5,15 @@ include ../../components/list-articles/index
 block main
   h1.name= 'Код написан с помощью разметки Pug!'
   +button
+  p.text= 'Нажми кнопку'
   +list-articles
+  img(src='images/built-with.png')
+  p.text= 'Если что-то не так, звони по телефону:'
+  a.phone-link(href='tel:+79189999999')
+    img.icon-phone(src='svg/phone_black_24dp.svg')
+    .phone-number='+79189999999'
+  p.text= 'или пиши на почту:'
+  a.email-link(href='mailto:info@jinv.ru' title='Написать письмо')
+    svg.icon(role='img')
+      use(href='svg/sprite.svg#email_black_24dp')
+    .email-address='info@jinv.ru'

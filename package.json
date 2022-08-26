@@ -10,8 +10,9 @@
     "watch:pug": "pug --pretty -w src/pages/home/index.pug -o dist",
     "sass": "node-sass src/index.scss -o tmp",
     "watch:sass": "node-sass -w src/index.scss -o tmp",
+    "watch:svg": "svgo -f src/assets/svg -o dist/svg && svg-sprite-generate -d dist/svg -o dist/svg/sprite.svg",
     "watch:post": "postcss -w tmp -d dist -u postcss-preset-env",
-    "img": "imagemin src/pages/**/images/* src/images/* -o dist/images",
+    "img": "imagemin src/pages/**/images src/images -o dist/images",
     "watch:serve": "browser-sync dist -w",
     "watch:rollup": "rollup -w -c rollup.config.js",
     "dev": "npm-run-all clean md-pug-to-html pug sass img -p watch:*",
@@ -32,7 +33,7 @@
   "devDependencies": {
     "browser-sync": "^2.27.10",
     "imagemin-cli": "^7.0.0",
-    "md-pug-to-html": "^1.2.5",
+    "md-pug-to-html": "^1.2.7",
     "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.16",
@@ -40,6 +41,8 @@
     "postcss-preset-env": "^7.8.0",
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^3.0.2",
-    "rollup": "^2.78.1"
+    "rollup": "^2.78.1",
+    "svg-sprite-generator": "^0.0.7",
+    "svgo": "^2.8.0"
   }
 }
