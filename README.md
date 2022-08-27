@@ -1,53 +1,141 @@
 # О проекте NpmForFrontend
 
-NpmForFrontend -- это набор NPM модулей для создания статических сайтов. NpmForFrontend позволяет писать статьи на Markdown, создавать страницы с помощью шаблонизатора Pug, стилизовать сайт с помощью Sass, а в качестве языка программирования использовать JavaScript.
+NpmForFrontend - это набор NPM модулей для создания статических сайтов. NpmForFrontend позволяет писать статьи на **Markdown**, создавать страницы с помощью шаблонизатора **Pug**, стилизовать сайт с помощью **Sass**, а в качестве языка программирования использовать **JavaScript**.
 
 В составе NpmForFrontend используются самые популярные (за исключением MdPugToHtml) NPM пакеты:
 
-- [BrowserSync](https://browsersync.io/) -- локальный сервер
-- [Imagemin](https://github.com/imagemin/imagemin-cli) -- минификатор изображений
-- [MdPugToHtml](https://www.npmjs.com/package/md-pug-to-html) -- пакетный конвертер
-- [node-sass](https://github.com/sass/node-sass) -- препроцессор SASS
-- [npm-run-all](https://github.com/mysticatea/npm-run-all) -- последовательный и параллельный запуск скриптов
-- [PostCSS](https://www.npmjs.com/package/postcss) -- постпроцессор CSS
-- [postcss-cli](https://github.com/postcss/postcss-cli) -- интерфейс командной строки для PostCSS
-- [PostCSS Preset Env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env) -- плагин PostCSS для поддержки старых браузеров
-- [Pug CLI](https://www.npmjs.com/package/pug-cli) -- интерфейс командной строки для шаблонизатора Pug
-- [Rimraf](https://www.npmjs.com/package/rimraf) -- очистка каталогов
-- [Rollup](https://www.npmjs.com/package/rollup) -- сборщик JavaScript файлов
-- [svg-sprite-generator](https://www.npmjs.com/package/svg-sprite-generator) -- генератор SVG-спрайтов
-- [SVGO](https://github.com/svg/svgo) -- минификатор SVG файлов
+- [BrowserSync](https://browsersync.io/) - локальный сервер
+- [Imagemin](https://github.com/imagemin/imagemin-cli) - минификатор изображений
+- [MdPugToHtml](https://www.npmjs.com/package/md-pug-to-html) - пакетный конвертер из Markdown в Html через шаблон Pug
+- [node-sass](https://github.com/sass/node-sass) - препроцессор SASS
+- [npm-run-all](https://github.com/mysticatea/npm-run-all) - последовательный и параллельный запуск скриптов
+- [PostCSS](https://www.npmjs.com/package/postcss) - постпроцессор CSS
+- [postcss-cli](https://github.com/postcss/postcss-cli) - интерфейс командной строки для PostCSS
+- [PostCSS Preset Env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env) - плагин PostCSS для поддержки старых браузеров
+- [Pug CLI](https://www.npmjs.com/package/pug-cli) - интерфейс командной строки для шаблонизатора Pug
+- [Rimraf](https://www.npmjs.com/package/rimraf) - очистка каталогов
+- [Rollup](https://www.npmjs.com/package/rollup) - сборщик JavaScript файлов
+- [svg-sprite-generator](https://www.npmjs.com/package/svg-sprite-generator) - генератор SVG-спрайтов
+- [SVGO](https://github.com/svg/svgo) - минификатор SVG файлов
 
-Вы можете прочитать статью [Настройка среды разработки с помощью NPM модулей и создание статического сайта](https://jinv.ru/Sozdanie-saytov/Nastrojka-NPM-dlya-staticheskogo-sajta/) о том, как этот набор модулей установить и настроить самому с нуля. Это позволит лучше понять, из чего состоит NpmForFrontend и какие функции выполняет каждый из входящих в него модулей. Если у вас нет времени, или вам это не интересно, то вы можете установить уже готовый и настроенный NpmForFrontend себе на компьютер и начать разрабатывать сайт. О том, как это сделать читайте ниже.
+О том, как установить и настроить самому с нуля этот набор модулей, вы можете узнать, прочитав статью [Настройка среды разработки с помощью NPM модулей и создание статического сайта](https://jinv.ru/Sozdanie-saytov/Nastrojka-NPM-dlya-staticheskogo-sajta/). Это позволит лучше понять, из чего состоит NpmForFrontend и какие функции выполняет каждый из входящих в него модулей. Если у вас нет времени, или вам это не интересно, то вы можете установить уже готовый и настроенный NpmForFrontend себе на компьютер и начать разрабатывать сайт. О том, как это сделать читайте ниже.
 
 ## Быстрый запуск
 
-Чтобы использовать данный набор инструментов у вас на компьютере должен быть установлен [Node.js](https://nodejs.org/) и [NPM](https://npmjs.com/).
+Чтобы использовать данный набор инструментов у вас на компьютере должен быть установлен [Node.js](https://nodejs.org/).
 
-Клонируем проект к себе на компьютер
+Откройте терминал и сделайте клон проекта к себе на компьютер:
 
 ```
 git clone https://github.com/injashkin/npm-for-frontend.git new-project-name
 ```
 
-Заходим в каталог и устанавливаем проект
+вместо `new-project-name` вы можете указать любое другое имя проекта
+
+Если у вас не установлен Git, то вы можете [здесь](https://github.com/injashkin/npm-for-frontend/archive/refs/heads/main.zip) скачать ZIP архив. Распакуйте этот архив.
+
+В окне терминала зайдите в каталог и установите проект. Для этого выполните следующие две команды:
 
 ```
 cd new-project-name
 npm i
 ```
 
-Запускаем проект и разрабатываем фронтенд
+Запустите проект с помощью следующей команды:
 
 ```
 npm run dev
 ```
+
+Должно открыться окно браузера со страницей, которая была сгенерирована NpmForFrontend. Теперь вы можете [разрабатывать сайт](#разработка-сайта).
 
 После разработки делаем продакшн версию сайта
 
 ```
 npm run build
 ```
+
+## Разработка сайта
+
+После запуска команды `npm run dev` вы должны увидеть, что ваш браузер автоматически открыл страницу. Теперь, не закрывая браузер откройте файловый менеджер и перейдите в каталог `new-project-name`. Вы увидите структуру файлов и каталогов похожую на эту:
+
+```
+|+content
+|+dist
+|+node_modules
+|-src
+  |+assets
+  |+components
+  |+data
+  |+layouts
+  |+pages
+  index.js
+  index.scss
+|+tmp
+.gitignore
+package-lock.json
+package.json
+README.md
+rollup.config.js
+```
+
+О том, что означает каждый каталог или файл читайте [здесь](#назначение-каталогов-и-файлов).
+
+С помощью файлового менеджера перейдите в каталог `src/pages/home` и откройте файл `index.pug` для редактирования. В нем будет следующий код:
+
+```pug
+extends ../../layouts/base/index
+include ../../components/button/button
+include ../../components/list-articles/index
+
+block main
+  h1.name= 'Код написан с помощью разметки Pug!'
+  +button
+  p.text= 'Нажми кнопку'
+  +list-articles
+  img(src='images/built-with.png')
+  p.text= 'Если что-то не так, звони по телефону:'
+  a.phone-link(href='tel:+79189999999')
+    img.icon-phone(src='svg/phone_black_24dp.svg')
+    .phone-number='+79189999999'
+  p.text= 'или пиши на почту:'
+  a.email-link(href='mailto:info@jinv.ru' title='Написать письмо')
+    svg.icon(role='img')
+      use(href='svg/sprite.svg#email_black_24dp')
+    .email-address='info@jinv.ru'
+```
+
+Попробуйте для начала изменить строку `h1.name= 'Код написан с помощью разметки Pug!'` на что-нибудь такое: `h1.name= 'Я изменил заголовок!'`. Теперь сохраните файл и посмотрите на открытую страницу в браузере. Заголовок страницы должен измениться.
+
+Прочитайте следующий раздел, чтобы понимать назначение каталогов и файлов в этом проекте.
+
+## Назначение каталогов и файлов
+
+- **content** - каталог, в котором хранятся ваши статьи, написанные на Markdown и файлы изображений к этим статьям. Этот каталог может находиться в любом другом месте вашего компьютера.
+
+- **dist** - каталог сборки проекта.
+
+- **node_modules** - каталог со всеми установленными модулями проекта, которые перечислены в разделе [О проекте NpmForFrontend](#о-проекте-npmforfrontend). В этом каталоге лучше ничего не менять. Но если вдруг что-то пошло не так, то вы можете безболезненно удалить данный каталог и в терминале выполнить команду `npm i`.
+
+- **src** - каталог с исходным кодом сайта. Все каталоги и файлы в этом каталоге необязательные и у вас могут быть иные.
+
+  - **assets** - каталог с общими для всего сайта ресурсами: шрифты, значки, логотипы и т. д.
+  - **components** - каталог с компонентами, с помощью которых создаются такие элементы, как кнопки, списки, меню, календари и т. д.
+  - **data** - каталог с данными о сайте.
+  - **layouts** - каталог с общими шаблонами, которые можно использовать для смены тем сайта.
+  - **pages** - каталог с шаблонами отдельных страниц сайта: главная, статья, страница ошибки и т. д.
+  - **index.js** - главный скрипт, в который подключаются все остальные скрипты.
+  - **index.scss** - главный файл стилей, в который подключаются все остальные стили.
+
+- **tmp** - временный каталог. Нужен некоторым пакетам для промежуточного сохранения файлов.
+
+- **.gitignore** - файл для системы контроля версий Git. В нем указаны каталоги и файлы, которые не должны отслеживаться гитом.
+
+- **package-lock.json** - файл содержит полную информацию обо всех установленных зависимостях.
+
+- **package.json** - файл конфигурации и управления пакетами в NpmForFrontend.
+
+- **rollup.config.js** - файл конфигурации для Rollup.
 
 ## Дальнейшее развитие NpmForFrontend
 
