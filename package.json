@@ -33,7 +33,7 @@
   "devDependencies": {
     "browser-sync": "^2.27.10",
     "imagemin-cli": "^7.0.0",
-    "md-pug-to-html": "^1.2.7",
+    "md-pug-to-html": "^1.2.8",
     "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.16",
